@@ -8,6 +8,12 @@
 #define print_limit(x) (printf(" %-4d - %s\n", x, #x))
 #define print_size(x)  (printf(" %-2ld - %s\n", sizeof(x), #x))
 
+struct st {
+	int a;
+	char b;
+	int c[10];
+};
+
 int main()
 {
 	printf("\nBytes Type");
@@ -77,6 +83,13 @@ int main()
 	print_limit(PIPE_BUF);
 	print_limit(FILENAME_MAX);
 	print_limit(BUFSIZ);
+
+	printf("\nPointer sizes:");
+	printf("\n------- ------\n");
+	printf("sizeof int*   : %ld\n", sizeof(int*));
+	printf("sizeof char*  : %ld\n", sizeof(char*));
+	printf("sizeof struct*: %ld\n", sizeof(struct st*));
+	printf("\n");
 
 	return 0;
 }

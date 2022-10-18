@@ -41,4 +41,11 @@ Bytes Type
  4096 - PIPE_BUF
  4096 - FILENAME_MAX
  8192 - BUFSIZ
+
+Pointer sizes:
+------- ------
+sizeof int*   : 8
+sizeof char*  : 8
+sizeof struct*: 8
+
 ```
